@@ -11,7 +11,8 @@
 		FF2A718A2539E2030015BBE8 /* TrafficLightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A71892539E2030015BBE8 /* TrafficLightsView.swift */; };
 		FF2A718C2539E2040015BBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2A718B2539E2040015BBE8 /* Assets.xcassets */; };
 		FF2A718F2539E2040015BBE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2A718E2539E2040015BBE8 /* Preview Assets.xcassets */; };
-		FF3E39DA253A18060034E735 /* Extension + TrafficLightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E39D9253A18060034E735 /* Extension + TrafficLightsView.swift */; };
+		FF6A70A4253DEB6C001DB387 /* ColorTrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A70A3253DEB6C001DB387 /* ColorTrafficLight.swift */; };
+		FF6A70AA253DEF5F001DB387 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A70A9253DEF5F001DB387 /* ButtonStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,8 @@
 		FF2A718B2539E2040015BBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2A718E2539E2040015BBE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF2A71902539E2040015BBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF3E39D9253A18060034E735 /* Extension + TrafficLightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + TrafficLightsView.swift"; sourceTree = "<group>"; };
+		FF6A70A3253DEB6C001DB387 /* ColorTrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTrafficLight.swift; sourceTree = "<group>"; };
+		FF6A70A9253DEF5F001DB387 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				FF2A71872539E2030015BBE8 /* TrafficLightsApp.swift */,
+				FF6A70A3253DEB6C001DB387 /* ColorTrafficLight.swift */,
+				FF6A70A9253DEF5F001DB387 /* ButtonStart.swift */,
 				FF2A71892539E2030015BBE8 /* TrafficLightsView.swift */,
-				FF3E39D9253A18060034E735 /* Extension + TrafficLightsView.swift */,
 				FF2A718B2539E2040015BBE8 /* Assets.xcassets */,
 				FF2A71902539E2040015BBE8 /* Info.plist */,
 				FF2A718D2539E2040015BBE8 /* Preview Content */,
@@ -141,8 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3E39DA253A18060034E735 /* Extension + TrafficLightsView.swift in Sources */,
+				FF6A70A4253DEB6C001DB387 /* ColorTrafficLight.swift in Sources */,
 				FF2A718A2539E2030015BBE8 /* TrafficLightsView.swift in Sources */,
+				FF6A70AA253DEF5F001DB387 /* ButtonStart.swift in Sources */,
 				FF2A71882539E2030015BBE8 /* TrafficLightsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

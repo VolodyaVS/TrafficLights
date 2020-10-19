@@ -13,15 +13,20 @@ enum CurrentLight {
 
 struct TrafficLightsView: View {
     
+    // MARK: - Private Properties
+    @State private var buttonTitle = "START"
+    @State private var currentLight = CurrentLight.red
+    
+    // MARK: - Private Methods
+    private func changeColor() {
+        switch currentLight {
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
+        }
+    }
+    
     // MARK: - Public Properties
-    @State var currentLight = CurrentLight.red
-    
-    @State var opacityRedLight = 0.4
-    @State var opacityYellowLight = 0.4
-    @State var opacityGreenLight = 0.4
-    
-    @State var textButton = "START"
-
     var body: some View {
         
         ZStack {
@@ -29,59 +34,19 @@ struct TrafficLightsView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 40.0) {
-                Circle()
-                    .frame(width: 120, height: 120)
-                    .foregroundColor(.red)
-                    .opacity(opacityRedLight)
-                    .overlay(
-                        roundedRectangale
-                            .stroke(strokeParameters, lineWidth: 5)
-                    )
-                
-                Circle()
-                    .frame(width: 120, height: 120)
-                    .foregroundColor(.yellow)
-                    .opacity(opacityYellowLight)
-                    .overlay(
-                        roundedRectangale
-                            .stroke(strokeParameters, lineWidth: 5)
-                    )
-                Circle()
-                    .frame(width: 120, height: 120)
-                    .foregroundColor(.green)
-                    .opacity(opacityGreenLight)
-                    .overlay(
-                        roundedRectangale
-                            .stroke(strokeParameters, lineWidth: 5)
-                    )
+                ColorTrafficLight(color: .red, opacity: currentLight == .red ? 1 : 0.3)
+                ColorTrafficLight(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
+                ColorTrafficLight(color: .green, opacity: currentLight == .green ? 1 : 0.3)
                 Spacer()
-                
-                Button(action: {
-                    changeLight()
-                }) {
-                    Text(textButton)
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .frame(width: 150.0, height: 50.0)
-                        .background(Color.gray)
-                        .cornerRadius(40.0)
-                        .foregroundColor(.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 40)
-                                .stroke(Color.white, lineWidth: 5)
-                        )
+                ButtonStart(titleButton: buttonTitle) {
+                    buttonTitle = "NEXT"
+                    changeColor()
                 }
             }
-            .padding(.all)
-            
+            .padding()
         }
+        
     }
-    
-    // MARK: - Private Properties
-    private let roundedRectangale = RoundedRectangle(cornerRadius: 60)
-    private let strokeParameters = Color(hue: 0.597,
-                                         saturation: 0.389,
-                                         brightness: 0.777)
     
 }
 
